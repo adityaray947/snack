@@ -8,10 +8,10 @@ import Zomato from '../../Data/Zomato.json';
 import Cards from '../Cards';
 
 export const Hero = () => {
- 
+  // Create a ref for the Recommendations section
   const recommendationsRef = useRef(null);
 
- 
+  // Function to scroll to Recommendations section
   const scrollToRecommendations = () => {
     if (recommendationsRef.current) {
       recommendationsRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -22,7 +22,7 @@ export const Hero = () => {
     ...Dominos.slice(0, 1),
     ...McDonalds.slice(0, 2),
     ...Swiggy.slice(0, 1),
-    ...Zomato.slice(0, 1)
+    ...Zomato.slice(0, 2)
   ];
 
   return (
@@ -49,10 +49,9 @@ export const Hero = () => {
         </div>
       </div>
       <div ref={recommendationsRef} className='mt-12'>
-      <h1 className='recom text-black text-4xl md:text-6xl font-extrabold text-center mt-12 mb-8 p-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text shadow-lg'>
-  Recommendations
-</h1>
-
+        <h1 className='recom text-black text-4xl md:text-6xl items-center justify-center'>
+          Recommendations
+        </h1>
         <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
           {
             combinedData.map((item) => (
@@ -60,11 +59,7 @@ export const Hero = () => {
             ))
           }
         </div>
-
-
-      
       </div>
-      
     </>
   );
 };
