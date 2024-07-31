@@ -1,0 +1,99 @@
+[
+   
+    {
+        "id": 2,
+        "name": "Farmhouse Pizza",
+        "company_name": "Domino's",
+        "category": "Pizza",
+        "image": "https://keyafoods.com/cdn/shop/articles/Classic_Chicken_Burger_36.png?v=1704438823&width=1100",
+        "price": 399
+    },
+    {
+        "id": 3,
+        "name": "Peppy Paneer Pizza",
+        "company_name": "Domino's",
+        "category": "Pizza",
+        "image": "https://kolkatagifts.ca/cdn/shop/products/06c9dcc4f29d4c1ef77171844560a410.jpg?v=1659241938",
+        "price": 299
+    },
+    {
+        "id": 4,
+        "name": "Garlic Breadsticks",
+        "company_name": "Domino's",
+        "category": "Snacks",
+        "image": "https://www.thespruceeats.com/thmb/YWPOc07QOjupBcOkE9G6koP4594=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/garlic-breadsticks-4150711-hero-01-a1fd1f54ab6a425aa95196cae3a0b2c0.jpg",
+        "price": 129
+    },
+    {
+        "id": 5,
+        "name": "Mexican Green Wave Pizza",
+        "company_name": "Domino's",
+        "category": "Pizza",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtNFh0kMDOkIwd3Xcqpwlx42jAOOO6qeawKzgj51gBrWnmYF-3GpT_2ZQiffP-wNrHPX4&usqp=CAU",
+        "price": 349
+    },
+    {
+        "id": 6,
+        "name": "Paneer Tikka Pizza",
+        "company_name": "Domino's",
+        "category": "Pizza",
+        "image": "https://carameltintedlife.com/wp-content/uploads/2021/09/paneer-pizza-recipe-1-2.jpg",
+        "price": 299
+    },
+    {
+        "id": 7,
+        "name": "Veggie Paradise Pizza",
+        "company_name": "Domino's",
+        "category": "Pizza",
+        "image": "https://www.dominos.co.in//files/items/Digital_Veggie_Paradise_olo_266x265.jpg",
+        "price": 279
+    },
+    {
+        "id": 8,
+        "name": "Indi Tandoori Paneer Pizza",
+        "company_name": "Domino's",
+        "category": "Pizza",
+        "image": "https://images.dominos.co.in/nextgen-catalog/media/prod/Dominos/menu/17bc2a18-73f5-49d7-95eb-327091806cd6_IndianTandooriPaneer.jpg",
+        "price": 349
+    },
+    {
+        "id": 9,
+        "name": "Chicken Sausage Pizza",
+        "company_name": "Domino's",
+        "category": "Pizza",
+        "image": "https://theorangecuisine.home.blog/wp-content/uploads/2019/05/9j925zalp4o01.jpg",
+        "price": 279
+    },
+    {
+        "id": 10,
+        "name": "Taco Mexicana",
+        "company_name": "Domino's",
+        "category": "Snacks",
+        "image": "https://www.dominos.co.in//files/items/Main_Menu-VG.jpg",
+        "price": 139
+    },
+    {
+        "id": 11,
+        "name": "Chicken Pepperoni Pizza",
+        "company_name": "Domino's",
+        "category": "Pizza",
+        "image": "https://www.zorabian.com/wp-content/uploads/2022/12/Homemade-Pepperoni-Pizza-1.jpg",
+        "price": 399
+    },
+    {
+        "id": 12,
+        "name": "Butterscotch Mousse Cake",
+        "company_name": "Domino's",
+        "category": "Desserts",
+        "image": "https://www.dominos.co.in//files/items/170046_BMC_image_for_Website_272X272.jpg",
+        "price": 99
+    },
+    {
+        "id": 13,
+        "name": "Choco Lava Cake",
+        "company_name": "Domino's",
+        "category": "Desserts",
+        "image": "https://floursandfrostings.com/wp-content/uploads/2017/01/IMG_20170104_003650_972-1.jpg",
+        "price": 129
+    }
+]

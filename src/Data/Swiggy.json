@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Cheese Fries",
+        "company_name": "Swiggy",
+        "category": "Snacks",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/apbf5wzsw5svg6bw4ypq",
+        "price": 99
+    },
+    {
+        "id": 2,
+        "name": "Paneer Butter Masala",
+        "company_name": "Swiggy",
+        "category": "Main Course",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_400/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/6/5ebe9f53-768c-4b8b-baac-777445a249d8_904878.jpg",
+        "price": 199
+    },
+    {
+        "id": 3,
+        "name": "Chicken Biryani",
+        "company_name": "Swiggy",
+        "category": "Main Course",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/bf9be1c6b9d796850f426281559cb2d2",
+        "price": 249
+    },
+    {
+        "id": 4,
+        "name": "Veg Spring Rolls",
+        "company_name": "Swiggy",
+        "category": "Snacks",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_240,h_240/99f7b889f0020f6c6692c5eb69fd9174",
+        "price": 129
+    },
+    {
+        "id": 5,
+        "name": "Butter Chicken",
+        "company_name": "Swiggy",
+        "category": "Main Course",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/dhrjwflbu9qkwjhhoqbk",
+        "price": 219
+    },
+    {
+        "id": 6,
+        "name": "Paneer Tikka",
+        "company_name": "Swiggy",
+        "category": "Snacks",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_240,h_240/FOOD_CATALOG/IMAGES/CMS/2024/6/15/69eaca1c-ec71-4f13-a71e-a0231658af50_ad430bf1-3f64-4c1d-a552-de75c733596e.JPG",
+        "price": 149
+    },
+    {
+        "id": 7,
+        "name": "Hakka Noodles",
+        "company_name": "Swiggy",
+        "category": "Main Course",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/tckxwevty1zccfds3qul",
+        "price": 179
+    },
+    {
+        "id": 8,
+        "name": "Veg Pakora",
+        "company_name": "Swiggy",
+        "category": "Snacks",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_400/adevdky3dksfdcijpqxw",
+        "price": 119
+    },
+    {
+        "id": 9,
+        "name": "Chocolate Mousse",
+        "company_name": "Swiggy",
+        "category": "Desserts",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/bhfylsufvxey30s29eez",
+        "price": 99
+    },
+    {
+        "id": 10,
+        "name": "Gulab Jamun",
+        "company_name": "Swiggy",
+        "category": "Desserts",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/eh982fclpgptbeq2mwpq",
+        "price": 89
+    },
+    {
+        "id": 11,
+        "name": "Fruit Punch",
+        "company_name": "Swiggy",
+        "category": "Beverages",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_400/heaf5oftnwyjshgcrh71",
+        "price": 89
+    },
+    {
+        "id": 12,
+        "name": "Iced Tea",
+        "company_name": "Swiggy",
+        "category": "Beverages",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/zizgbovsdslb07tobrte",
+        "price": 79
+    },
+    {
+        "id": 13,
+        "name": "Veg Burger",
+        "company_name": "Swiggy",
+        "category": "Burgers",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/uyfpwo7ozmt8wwwiw84f",
+        "price": 129
+    },
+    {
+        "id": 14,
+        "name": "Chicken Wrap",
+        "company_name": "Swiggy",
+        "category": "Wraps",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_400/vekwd48qtdpycm9v4lg5",
+        "price": 159
+    },
+    {
+        "id": 15,
+        "name": "Cheese Pizza",
+        "company_name": "Swiggy",
+        "category": "Pizza",
+        "image": "https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/c77fe42b7997c566f491e84b540701ca",
+        "price": 299
+    }
+]

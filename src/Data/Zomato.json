@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Cheese Fries",
+        "company_name": "Zomato",
+        "category": "Snacks",
+        "image": "https://b.zmtcdn.com/data/dish_photos/2b0/0ff39309dbb9b5fd3f7b937129f892b0.jpg",
+        "price": 109
+    },
+    {
+        "id": 2,
+        "name": "Paneer Butter Masala",
+        "company_name": "Zomato",
+        "category": "Main Course",
+        "image": "https://b.zmtcdn.com/data/dish_photos/03e/f066220c4fd13e289503190f0684403e.jpg",
+        "price": 189
+    },
+    {
+        "id": 3,
+        "name": "Chicken Biryani",
+        "company_name": "Zomato",
+        "category": "Main Course",
+        "image": "https://b.zmtcdn.com/data/pictures/3/307893/6d9dad14da075d37021c25041773e07b_o2_featured_v2.jpg",
+        "price": 269
+    },
+    {
+        "id": 4,
+        "name": "Veg Spring Rolls",
+        "company_name": "Zomato",
+        "category": "Snacks",
+        "image": "https://b.zmtcdn.com/data/dish_photos/128/4313cef45919511a1de7a03045647128.jpg",
+        "price": 149
+    },
+    {
+        "id": 5,
+        "name": "Butter Chicken",
+        "company_name": "Zomato",
+        "category": "Main Course",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIv7SQZPFaMEU6EpnOG4EU23rbnZ8ug697rlZupJhwW2EPrx1Dw9-RMm53sjW05EjHERs&usqp=CAU",
+        "price": 259
+    },
+    {
+        "id": 6,
+        "name": "Paneer Tikka",
+        "company_name": "Zomato",
+        "category": "Snacks",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReuOifwZZ0v3Cbt7oTgALwWqSAn8-o5XNRzuweGjP5Cf22h89_ET7smLlliKdvF9RVu4M&usqp=CAU",
+        "price": 149
+    },
+    {
+        "id": 7,
+        "name": "Hakka Noodles",
+        "company_name": "Zomato",
+        "category": "Main Course",
+        "image": "https://b.zmtcdn.com/data/dish_photos/68e/07577637c5cbbdde68d5e47a54f8e68e.jpg",
+        "price": 179
+    },
+    {
+        "id": 8,
+        "name": "chicken Pakora",
+        "company_name": "Zomato",
+        "category": "Snacks",
+        "image": "https://b.zmtcdn.com/data/dish_photos/d9b/90bcc3e590cfcab47f220217e06cad9b.jpg",
+        "price": 119
+    },
+    {
+        "id": 9,
+        "name": "Chocolate Mousse",
+        "company_name": "Zomato",
+        "category": "Desserts",
+        "image": "https://b.zmtcdn.com/data/dish_photos/379/8abddd11e598181f55b7aa370e864379.png",
+        "price": 99
+    },
+    {
+        "id": 10,
+        "name": "Gulab Jamun",
+        "company_name": "Zomato",
+        "category": "Desserts",
+        "image": "https://b.zmtcdn.com/data/dish_photos/04f/8680819b81cae2a6cca056de799f704f.png",
+        "price": 89
+    },
+    {
+        "id": 11,
+        "name": "Fruit juice",
+        "company_name": "Zomato",
+        "category": "Beverages",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiUupPyFdWQY6LlzvvIoGSvAHIQeaT8quFOiApwaCTfAc-3BctomM3Pmv5Qfsj9w6GjsY&usqp=CAU",
+        "price": 89
+    },
+    {
+        "id": 12,
+        "name": "Iced coffee",
+        "company_name": "Zomato",
+        "category": "Beverages",
+        "image": "https://b.zmtcdn.com/data/dish_photos/e2e/d268e234432ee21e6fab2b825d1afe2e.jpg",
+        "price": 79
+    },
+    {
+        "id": 13,
+        "name": "Veg Burger",
+        "company_name": "Zomato",
+        "category": "Burgers",
+        "image": "https://b.zmtcdn.com/data/pictures/9/18614929/80b00bc9daa926cbbd9eff789af62525.jpg",
+        "price": 129
+    },
+    {
+        "id": 14,
+        "name": "Chicken Wrap",
+        "company_name": "Zomato",
+        "category": "Wraps",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQhnLxm0Axm_clQLrZV5a8BtG_X7hCQ9yuzMwXBYzeBAMX2SMQWnp68dSFEJs9-khMjeY&usqp=CAU",
+        "price": 159
+    },
+    {
+        "id": 15,
+        "name": "Cheese Pizza",
+        "company_name": "Zomato",
+        "category": "Pizza",
+        "image": "https://b.zmtcdn.com/data/pictures/chains/0/19974610/3716c0f57c6eabbc3d83f1d0c72648c2.jpg?fit=around|960:500&crop=960:500;*,*",
+        "price": 299
+    }
+]
