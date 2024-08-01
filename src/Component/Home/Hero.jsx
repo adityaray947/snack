@@ -49,9 +49,9 @@ export const Hero = () => {
         </div>
       </div>
       <div ref={recommendationsRef} className='mt-12'>
-        <h1 className='recom text-black text-4xl md:text-6xl items-center justify-center'>
-          Recommendations
-        </h1>
+      <h1 className='recom text-black text-4xl md:text-6xl font-extrabold text-center mt-12 mb-8 p-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text shadow-lg'>
+  Recommendations
+</h1>
         <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
           {
             combinedData.map((item) => (
