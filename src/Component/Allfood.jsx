@@ -34,7 +34,7 @@ const Food = () => {
                     Welcome to SnackSaver, your ultimate destination for discovering the best in food and dining! Explore a curated collection of top-rated restaurants, delicious recipes, and exclusive offers. From savory snacks and hearty main courses to delightful desserts, we bring you a diverse selection that caters to all tastes. 
                     </p>
                     <div className='mt-5'>
-                    <Link to="/" className='mt-10 ml-3 text-yellow-500'>
+                    <Link to="/home" className='mt-10 ml-3 text-yellow-500'>
                         Back
                     </Link>
                     </div>

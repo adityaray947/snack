@@ -23,16 +23,14 @@ const Login = () => {
                 email,
                 password,
             });
-            console.log(res.data); // Log response data to the console
+            console.log(res.data);
             toast({
                 title: "Logged in successfully.",
                 status: "success",
                 duration: 5000,
                 isClosable: true,
             });
-            // Save the token to local storage and context
             login(res.data);
-            // Redirect to home page
             navigate("/home");
         } catch (error) {
             console.error(error);
