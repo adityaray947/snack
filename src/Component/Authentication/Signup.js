@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@chakra-ui/button";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import { VStack } from "@chakra-ui/layout";
 import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
-import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
   const toast = useToast();
+  const navigate = useNavigate(); 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,58 +20,44 @@ const Signup = () => {
   const submitHandler = async () => {
     if (password !== confirmpassword) {
       toast({
-        title: "Passwords do not match",
+        title: "Passwords do not match.",
         status: "error",
         duration: 5000,
         isClosable: true,
-        position: "bottom",
       });
       return;
     }
+
     try {
-      const config = {
-        headers: {
-          "Content-type": "application/json",
-        },
-      };
-      const response = await axios.post(
-        "http://localhost:3000/api/user", 
-        { name, email, password },
-        config
-      );
-      const data = response.data;
+      const res = await axios.post("http://localhost:5000/api/user", {
+        name,
+        email,
+        password,
+      });
+      console.log(res.data); // Log response data to the console
       toast({
-        title: "Registration Successful",
+        title: "Registration successful.",
+        description: "You can now log in.",
         status: "success",
         duration: 5000,
         isClosable: true,
-        position: "bottom",
       });
-
+      // Clear the form
+      setName("");
+      setEmail("");
+      setPassword("");
+      setConfirmpassword("");
     } catch (error) {
-      console.error("Error during registration:", error);
-      if (error.response && error.response.data && error.response.data.message) {
-        toast({
-          title: "Error Occurred!",
-          description: error.response.data.message,
-          status: "error",
-          duration: 5000,
-          isClosable: true,
-          position: "bottom",
-        });
-      } else {
-        toast({
-          title: "Error Occurred!",
-          description: "Something went wrong.",
-          status: "error",
-          duration: 5000,
-          isClosable: true,
-          position: "bottom",
-        });
-      }
+      console.error(error);
+      toast({
+        title: "Error creating account.",
+        description: error.response?.data?.message || "An error occurred.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
     }
   };
-  
 
   return (
     <VStack spacing="5px">
@@ -78,6 +65,7 @@ const Signup = () => {
         <FormLabel>Name</FormLabel>
         <Input
           placeholder="Enter Your Name"
+          value={name}
           onChange={(e) => setName(e.target.value)}
         />
       </FormControl>
@@ -86,6 +74,7 @@ const Signup = () => {
         <Input
           type="email"
           placeholder="Enter Your Email Address"
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </FormControl>
@@ -95,6 +84,7 @@ const Signup = () => {
           <Input
             type={show ? "text" : "password"}
             placeholder="Enter Password"
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <InputRightElement width="4.5rem">
@@ -110,6 +100,7 @@ const Signup = () => {
           <Input
             type={show ? "text" : "password"}
             placeholder="Confirm password"
+            value={confirmpassword}
             onChange={(e) => setConfirmpassword(e.target.value)}
           />
           <InputRightElement width="4.5rem">
