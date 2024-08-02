@@ -43,7 +43,7 @@ const Navbar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100  text-black rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a href='/'>Home</a></li>
+        <li><a href='/'>Logout</a></li>
         <li><a href='/Allfood'>All Food </a></li>
         <li><a href='/'>Category</a></li> 
       </ul>
@@ -67,7 +67,7 @@ const Navbar = () => {
   <div className="navbar-end h-10 ">
   <div className="navbar-center hidden lg:flex  ">
     <ul className="menu menu-horizontal px-1 text-white">
-      <li><a href='/'>Home</a></li>
+      <li><a href='/'>Logout</a></li>
       <li><a href='/Allfood'>All Food</a></li>
       <li><a href='/'>Category</a></li> 
       {/* <li><a>About</a></li>
