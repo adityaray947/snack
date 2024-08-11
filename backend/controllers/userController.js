@@ -1,6 +1,11 @@
 const asyncHandler = require('express-async-handler');
 const generateToken = require('../config/generateToken.js');
 const User = require('../models/userModel.js');
+const Swiggy = require('../models/swiggyModel.js');
+const Zomato = require('../models/zomatoModel.js');
+const { MongoClient } = require('mongodb');
+
+
 
 const registerUser = asyncHandler(async (req, res) => {
     const { name, email, password } = req.body;
@@ -53,4 +58,39 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { registerUser, authUser };
+const searchItem = asyncHandler(async (req, res) => {
+  const { itemName } = req.body;  
+
+  if (!itemName) {
+    res.status(400);
+    throw new Error('Item name is required');
+  }
+
+  
+  const swiggyItems = await Swiggy.find({ name: itemName });
+  const zomatoItems = await Zomato.find({ name: itemName });
+
+  
+  const allItems = [...swiggyItems, ...zomatoItems];
+
+  
+  if (allItems.length === 0) {
+    res.status(404);
+    throw new Error('Item not found');
+  }
+
+  
+  const lowestPricedItem = allItems.reduce((min, item) => item.price < min.price ? item : min);
+
+  
+  res.json({
+    name: lowestPricedItem.name,
+    price: lowestPricedItem.price,
+    //source: lowestPricedItem.source, 
+  });
+});
+
+
+
+
+module.exports = { registerUser, authUser,searchItem };

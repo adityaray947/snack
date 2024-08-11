@@ -5,6 +5,7 @@ import Home from './Component/Home/Home';
 import Allfood from './Component/Allfood';
 import Homepage from './Pages/Homepage';
 import Location from './Component/Location/location.jsx';
+import AddToCollection from './Component/Home/AddToCollection.js';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/allfood" element={<Allfood />} />
+          <Route path="/addfood" element={<AddToCollection />} />
+
         </Routes>
         <Location/>
       </Router>
