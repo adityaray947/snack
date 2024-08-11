@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Cards from '../Component/Cards'; 
 import '../Style/style1.css';
 import Navbar from './Navbar';
@@ -11,8 +11,7 @@ const SearchResultsPage = () => {
   const [error, setError] = useState(null);
   const [hasSearched, setHasSearched] = useState(false); // Track if a search has been performed
   const location = useLocation();
-  const navigate = useNavigate();
-
+  
   useEffect(() => {
     const query = new URLSearchParams(location.search).get('query');
 
