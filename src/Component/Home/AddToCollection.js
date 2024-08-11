@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
 import { Button } from "@chakra-ui/button";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
-import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
-import { VStack, HStack } from "@chakra-ui/layout";
+import { Input } from "@chakra-ui/input";
+import { VStack } from "@chakra-ui/layout";
 import { Select } from "@chakra-ui/select";
 import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
 
 const AddToCollection = () => {
   const toast = useToast();
-  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
-  const [place, setPlace] = useState("");
+  const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
   const [ratings, setRatings] = useState("");
-  const [collection, setCollection] = useState("swiggy"); // Default to Swiggy
+  const [image, setImage] = useState("");
+  const [company, setCompany] = useState("swiggy");
 
   const submitHandler = async () => {
-    if (!name || !location || !place || !price || !ratings) {
+    if (!name || !location || !category || !price || !ratings || !image) {
       toast({
         title: "Please fill in all fields.",
         status: "error",
@@ -30,17 +29,19 @@ const AddToCollection = () => {
     }
 
     try {
-      const res = await axios.post(`http://localhost:5000/api/${collection}`, {
+      const res = await axios.post(`http://localhost:5000/api/${company}`, {
         name,
         location,
-        place,
+        category,
         price,
         ratings,
+        image,
+        company_name: company,  
       });
-      console.log(res.data); // Log response data to the console
+      console.log(res.data);
       toast({
         title: "Data added successfully.",
-        description: `Data added to ${collection} collection.`,
+        description: `Data added to ${company} collection.`,
         status: "success",
         duration: 5000,
         isClosable: true,
@@ -48,9 +49,10 @@ const AddToCollection = () => {
       // Clear the form
       setName("");
       setLocation("");
-      setPlace("");
+      setCategory("");
       setPrice("");
       setRatings("");
+      setImage("");
     } catch (error) {
       console.error(error);
       toast({
@@ -81,13 +83,19 @@ const AddToCollection = () => {
           onChange={(e) => setLocation(e.target.value)}
         />
       </FormControl>
-      <FormControl id="place" isRequired>
-        <FormLabel>Place</FormLabel>
-        <Input
-          placeholder="Enter Place"
-          value={place}
-          onChange={(e) => setPlace(e.target.value)}
-        />
+      <FormControl id="category" isRequired>
+        <FormLabel>Category</FormLabel>
+        <Select
+          placeholder="Select Category"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value="snacks">Snacks</option>
+          <option value="burgers">Burgers</option>
+          <option value="main_course">Main Course</option>
+          <option value="desserts">Desserts</option>
+          <option value="beverages">Beverages</option>
+        </Select>
       </FormControl>
       <FormControl id="price" isRequired>
         <FormLabel>Price</FormLabel>
@@ -105,15 +113,25 @@ const AddToCollection = () => {
           onChange={(e) => setRatings(e.target.value)}
         />
       </FormControl>
-      <FormControl id="collection" isRequired>
-        <FormLabel>Select Collection</FormLabel>
+      <FormControl id="image" isRequired>
+        <FormLabel>Image URL</FormLabel>
+        <Input
+          placeholder="Enter Image URL"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+        />
+      </FormControl>
+      <FormControl id="company" isRequired>
+        <FormLabel>Select Company</FormLabel>
         <Select
-          placeholder="Select Collection"
-          value={collection}
-          onChange={(e) => setCollection(e.target.value)}
+          placeholder="Select Company"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
         >
           <option value="swiggy">Swiggy</option>
           <option value="zomato">Zomato</option>
+          <option value="dominos">Domino's</option>
+          <option value="mcdonalds">McDonald's</option>
         </Select>
       </FormControl>
       <Button

@@ -6,22 +6,20 @@ import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
     const[sticky,setSticky]=useState(false)
     const [searchTerm, setSearchTerm] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
     const navigate = useNavigate();
 
     const handleSearch = async (e) => {
-      setSearchTerm(e.target.value);
-  
-      if (e.target.value.trim()) {
-        try {
-          const response = await axios.post('/api/user/search', { itemName: e.target.value });
-          console.log('Lowest Priced Item:', response.data);
-        } catch (error) {
-          console.error('Error fetching item:', error.response ? error.response.data : error.message);
+      if (e.key === 'Enter') {
+        if (searchTerm.trim()) {
+          navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
         }
+      } else {
+        setSearchTerm(e.target.value);
       }
     };
     const handleAddFoodClick = () => {
-      navigate('/addfood');  // Navigate to the AddToCollection component
+      navigate('/addfood');  
     };
   
   useEffect(()=>{
@@ -66,7 +64,7 @@ const Navbar = () => {
         className="menu menu-sm dropdown-content bg-base-100  text-black rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <li><a href='/home'>home</a></li>
         <li><a onClick={handleAddFoodClick}>Add Food </a></li>
-        <li><a href='/'>Category</a></li> 
+        <li><a href='/Allfood'>Category</a></li> 
         <li><a href='/'>Logout</a></li>
       </ul>
     </div>
@@ -85,14 +83,16 @@ const Navbar = () => {
   </div>
   <div className="search-container ">
   < input placeholder="Search here" className="input" name="text" type="text" value={searchTerm}
-  onChange={handleSearch}  />
+  onChange={handleSearch}  
+  onKeyDown={handleSearch}
+  />
   </div>
   <div className="navbar-end h-10 ">
   <div className="navbar-center hidden lg:flex  ">
     <ul className="menu menu-horizontal px-1 text-white">
       <li><a href='/home'>Home</a></li>
       <li><a href='/addfood'>Add Food</a></li>
-      <li><a href='/'>Category</a></li> 
+      <li><a href='/Allfood'>Category</a></li> 
       <li><a href='/'>Logout</a></li>
       {/* <li><a>About</a></li>
       <li><a>Contact</a></li> */}

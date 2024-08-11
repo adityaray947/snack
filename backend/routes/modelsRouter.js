@@ -1,49 +1,45 @@
 const express = require("express");
-const Swiggy = require("../models/swiggyModel.js");
-const Zomato = require("../models/zomatoModel.js");
+const Swiggy = require("../models/swiggyModel");
+const Zomato = require("../models/zomatoModel");
+const Dominos = require("../models/Dominos.js");
+const McDonalds = require("../models/McDonalds.js");
 
 const router = express.Router();
 
-// Route for adding data to the Swiggy model
-router.post("/swiggy", async (req, res) => {
-  const { name, location, place, price, ratings } = req.body;
-
-  try {
-    const swiggyData = new Swiggy({
-      name,
-      location,
-      place,
-      price,
-      ratings,
-    });
-
-    const savedData = await swiggyData.save();
-    res.status(201).json(savedData);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Error saving Swiggy data" });
+const getModel = (company) => {
+  switch (company) {
+    case 'dominos': return Dominos;
+    case 'mcdonalds': return McDonalds;
+    case 'swiggy': return Swiggy;
+    case 'zomato': return Zomato;
+    default: throw new Error('Invalid company name');
   }
-});
+};
 
-// Route for adding data to the Zomato model
-router.post("/zomato", async (req, res) => {
-  const { name, location, place, price, ratings } = req.body;
+// Route for adding data
+router.post('/:company', async (req, res) => {
+  const { company } = req.params;
+  const Model = getModel(company);
+  const { name, location, category, price, ratings, image } = req.body;
 
   try {
-    const zomatoData = new Zomato({
+    const newData = new Model({
       name,
       location,
-      place,
+      category,
       price,
       ratings,
+      image,
+      company_name: company,
     });
 
-    const savedData = await zomatoData.save();
+    const savedData = await newData.save();
     res.status(201).json(savedData);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Error saving Zomato data" });
+    res.status(500).json({ message: "Error saving data" });
   }
 });
 
 module.exports = router;
+

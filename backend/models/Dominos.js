@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const swiggyModel = mongoose.Schema(
+const Dominos = mongoose.Schema(
   {
     name: { type: String, required: true, trim: true },
     location: { type: String, required: true, trim: true },
@@ -13,6 +13,6 @@ const swiggyModel = mongoose.Schema(
   { timestamps: true }
 );
 
-const Swiggy = mongoose.model("Swiggy", swiggyModel);
+const DominosModel = mongoose.model("DominosModel", Dominos);
 
-module.exports = Swiggy;
+module.exports = DominosModel;

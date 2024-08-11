@@ -3,6 +3,8 @@ const generateToken = require('../config/generateToken.js');
 const User = require('../models/userModel.js');
 const Swiggy = require('../models/swiggyModel.js');
 const Zomato = require('../models/zomatoModel.js');
+const DominosModel=require("../models/Dominos.js")
+const McDonaldsModel=require("../models/McDonalds.js")
 const { MongoClient } = require('mongodb');
 
 
@@ -59,36 +61,41 @@ const authUser = asyncHandler(async (req, res) => {
 });
 
 const searchItem = asyncHandler(async (req, res) => {
-  const { itemName } = req.body;  
+  const { itemName } = req.body;
 
   if (!itemName) {
-    res.status(400);
-    throw new Error('Item name is required');
+    res.status(400).json({ message: 'Item name is required' });
+    return;
   }
 
-  
-  const swiggyItems = await Swiggy.find({ name: itemName });
-  const zomatoItems = await Zomato.find({ name: itemName });
+  try {
+    const regex = new RegExp(itemName, 'i'); // Case-insensitive search
 
-  
-  const allItems = [...swiggyItems, ...zomatoItems];
+    const swiggyItems = await Swiggy.find({ name: regex }).exec();
+    const zomatoItems = await Zomato.find({ name: regex }).exec();
+    const dominosItems = await DominosModel.find({ name: regex }).exec();
+    const mcdonaldsItems = await McDonaldsModel.find({ name: regex }).exec();
 
-  
-  if (allItems.length === 0) {
-    res.status(404);
-    throw new Error('Item not found');
+    const allItems = [...swiggyItems, ...zomatoItems, ...dominosItems, ...mcdonaldsItems];
+
+    if (allItems.length === 0) {
+      res.status(404).json({ message: 'Item not found' });
+      return;
+    }
+
+    // Sort items by price from low to high
+    const sortedItems = allItems.sort((a, b) => a.price - b.price);
+
+    res.json({
+      items: sortedItems
+    });
+  } catch (error) {
+    console.error('Error fetching item:', error);
+    res.status(500).json({ message: 'Server error' });
   }
-
-  
-  const lowestPricedItem = allItems.reduce((min, item) => item.price < min.price ? item : min);
-
-  
-  res.json({
-    name: lowestPricedItem.name,
-    price: lowestPricedItem.price,
-    //source: lowestPricedItem.source, 
-  });
 });
+
+
 
 
 

@@ -1,122 +1,137 @@
 [
     {
-        "id": 1,
         "name": "Cheese Fries",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Snacks",
+        "price": 99,
+        "ratings": 4.5,
         "image": "https://www.recipetineats.com/tachyon/2022/09/Fries-with-rosemary-salt_1.jpg",
-        "price": 99
+        "company_name": "McDonald's"
     },
     {
-        "id": 2,
         "name": "McAloo Tikki Burger",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Burgers",
+        "price": 49,
+        "ratings": 4.2,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR34khXFX_5tM4FzsVmxg6fIWPHevnnDgP7ALqEceQ4PO2OoyuO_H7XiA7X-yy2PhQ2774&usqp=CAU",
-        "price": 49
+        "company_name": "McDonald's"
     },
     {
-        "id": 3,
         "name": "Chicken Maharaja Mac",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Burgers",
+        "price": 199,
+        "ratings": 4.7,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2XBwWs8FHHcty8YaoVhsQXNcp3Lr1DJCBeGwcPEPSjkCsK3gHM-Ik1HF5Xfb8q5GUIPE&usqp=CAU",
-        "price": 199
+        "company_name": "McDonald's"
     },
     {
-        "id": 4,
         "name": "Veg Pizza McPuff",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Snacks",
+        "price": 35,
+        "ratings": 4.3,
         "image": "https://i2.wp.com/www.bharatzkitchen.com/wp-content/uploads/2015/01/Mcdonalds-Pizza-Mcpuff.jpg?fit=480%2C258&ssl=1",
-        "price": 35
+        "company_name": "McDonald's"
     },
     {
-        "id": 5,
         "name": "Filet-O-Fish",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Burgers",
+        "price": 159,
+        "ratings": 4.1,
         "image": "https://www.recipetineats.com/uploads/2018/08/Homemade-Filet-O-Fish_3.jpg",
-        "price": 159
+        "company_name": "McDonald's"
     },
     {
-        "id": 6,
         "name": "McSpicy Paneer Burger",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Burgers",
+        "price": 179,
+        "ratings": 4.5,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-zNXNQ-FuwHh0cEcgMiA0lfBlOlhfuNypgyv3-z4JFXvz0zavgNDiBATOMGym6VbBZo&usqp=CAU",
-        "price": 179
+        "company_name": "McDonald's"
     },
     {
-        "id": 7,
         "name": "McSpicy Chicken Burger",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Burgers",
+        "price": 199,
+        "ratings": 4.6,
         "image": "https://5.imimg.com/data5/NH/WD/MY-33353830/mcspicy-chicken-burger.png",
-        "price": 199
+        "company_name": "McDonald's"
     },
     {
-        "id": 8,
         "name": "McEgg",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Burgers",
+        "price": 35,
+        "ratings": 4.0,
         "image": "https://5.imimg.com/data5/NK/SI/MY-33353830/mcdonald-mcegg-burger.png",
-        "price": 35
+        "company_name": "McDonald's"
     },
     {
-        "id": 9,
         "name": "Chicken McNuggets",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Snacks",
+        "price": 149,
+        "ratings": 4.5,
         "image": "https://www.foodandwine.com/thmb/25k7IDKxNPJ9jHSHgBcLSZ5S_lc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Spicy-McNuggets-Are-Back-at-McDonalds-FT-BLOG0923-43139bdeb0874fc59af1abd48e5c5e34.jpg",
-        "price": 149
+        "company_name": "McDonald's"
     },
     {
-        "id": 10,
         "name": "McFlurry Oreo",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Desserts",
+        "price": 119,
+        "ratings": 4.7,
         "image": "https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-oreo-mcflurry-allergen:product-header-mobile?wid=768&hei=441&dpr=off",
-        "price": 119
+        "company_name": "McDonald's"
     },
     {
-        "id": 11,
         "name": "Chocolate Sundae",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Desserts",
+        "price": 79,
+        "ratings": 4.4,
         "image": "https://www.keep-calm-and-eat-ice-cream.com/wp-content/uploads/2020/10/Chocolate-sundae-square.png",
-        "price": 79
+        "company_name": "McDonald's"
     },
     {
-        "id": 12,
         "name": "Strawberry Sundae",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Desserts",
+        "price": 79,
+        "ratings": 4.3,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVXYcpm-UyiFK3YkNWhlWhgJBRbyr_ago-U87arKmnAzhD-_9f5XYBFXfX6M8rpG0eIIQ&usqp=CAU",
-        "price": 79
+        "company_name": "McDonald's"
     },
     {
-        "id": 13,
         "name": "Cold Coffee",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Beverages",
+        "price": 119,
+        "ratings": 4.6,
         "image": "https://www.cookwithmanali.com/wp-content/uploads/2022/04/Cold-Coffee-500x500.jpg",
-        "price": 119
+        "company_name": "McDonald's"
     },
     {
-        "id": 14,
         "name": "McCafe Latte",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Beverages",
+        "price": 129,
+        "ratings": 4.5,
         "image": "https://s7d1.scene7.com/is/image/mcdonalds/hero_lattes_desktop:hero-desktop?resmode=sharp2",
-        "price": 129
+        "company_name": "McDonald's"
     },
     {
-        "id": 15,
         "name": "Coke Float",
-        "company_name": "McDonald's",
+        "location": "Janakpuri",
         "category": "Beverages",
+        "price": 89,
+        "ratings": 4.4,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOWq6E4Vlm29liy2aW-h0_TUHQ7FfPbUQ-9g&usqp=CAU",
-        "price": 89
+        "company_name": "McDonald's"
     }
 ]
