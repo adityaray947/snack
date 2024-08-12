@@ -29,7 +29,7 @@ const AddToCollection = () => {
     }
 
     try {
-      const res = await axios.post(`https://snack-ey97.onrender.com//api/${company}`, {
+      const res = await axios.post(`https://snack-ey97.onrender.com/api/${company}`, {
         name,
         location,
         category,
