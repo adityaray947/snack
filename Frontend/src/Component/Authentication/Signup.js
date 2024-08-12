@@ -29,7 +29,7 @@ const Signup = () => {
     }
 
     try {
-      const res = await axios.post("https://snack-ey97.onrender.com/api/user", {
+      const res = await axios.post("https://snack-xjx3.onrender.com/api/user", {
         name,
         email,
         password,

@@ -19,7 +19,7 @@ const Login = () => {
 
     const submitHandler = async () => {
         try {
-            const res = await axios.post("https://snack-ey97.onrender.com/api/user/login", {
+            const res = await axios.post("https://snack-xjx3.onrender.com/api/user/login", {
                 email,
                 password,
             });
