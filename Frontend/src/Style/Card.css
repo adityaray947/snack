@@ -1,18 +1,20 @@
 .card-container {
     display: flex;
-    justify-content: center; 
-    margin-bottom: 1.5rem; 
+    justify-content: center;
+    margin-bottom: 2rem; /* Increase spacing for better visual separation */
 }
 
 .card {
     position: relative;
     width: 100%;
-    max-width: 340px; 
-    height: 400px; 
+    max-width: 350px; /* Adjust max-width for a balanced look */
+    height: 420px; /* Increase height slightly for better content fit */
     overflow: hidden;
     border-radius: 1rem;
-    background-color: #1f2937; /* Card background color */
-    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out; 
+    background-color: #ffffff; /* Light background for better contrast */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border: 1px solid #e5e7eb; /* Light border for a more defined edge */
 }
 
 .card-image {
@@ -20,45 +22,66 @@
     inset: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover; 
+    object-fit: cover;
+    filter: brightness(60%); /* Darken image for better text readability */
+    transition: filter 0.3s ease-in-out; /* Smooth filter transition */
 }
 
 .card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(31, 41, 55, 1), rgba(31, 41, 55, 0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
 .card-content {
     position: relative;
     z-index: 10;
-    padding: 1.5rem; 
-    color: #fff; 
+    padding: 1.5rem;
+    color: #ffffff; /* White text for readability */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; 
+    justify-content: flex-end;
+    text-align: left; /* Align text to the left for a more polished look */
 }
 
 .card-title {
-    font-size: 1.875rem; 
-    font-weight: bold;
+    font-size: 1.75rem; /* Slightly smaller font-size for a more polished look */
+    font-weight: 700;
+    color: #fbbf24; /* Accent color for the title */
+    margin-bottom: 0.5rem; /* Spacing between title and description */
 }
 
 .card-description {
-    margin-top: 250px; 
-    font-size: 0.875rem; 
-    color: #d1d5db; 
+    margin-top: 0.5rem; /* Adjust margin for better spacing */
+    font-size: 0.875rem;
+    color: #d1d5db; /* Light grey for description text */
+}
+
+.card-description .company-name {
+    display: block;
+    font-weight: 500; /* Medium weight for the company name */
+}
+
+.card-description .location {
+    display: block;
+    margin-top: 0.25rem;
+    font-weight: 400; /* Regular weight for location */
+    color: #ef4444; /* Red color for the location */
 }
 
 .card-price {
-    margin-top: 0.5rem;
-    font-size: 1.125rem; 
-    font-weight: semibold;
-    color: #fbbf24; 
+    margin-top: 1rem;
+    font-size: 1.25rem; /* Slightly larger font-size for price */
+    font-weight: 600;
+    color: #34d399; /* Green color for the price */
+}
+
+.card:hover .card-image {
+    filter: brightness(50%); /* Darker image on hover for emphasis */
 }
 
 .card:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    border-color: #fbbf24; /* Accent border color on hover */
 }
-

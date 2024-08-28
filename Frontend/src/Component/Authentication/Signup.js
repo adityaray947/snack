@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from "@chakra-ui/button";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
-import { VStack } from "@chakra-ui/layout";
+import { VStack, Box, Heading, Text } from "@chakra-ui/layout";
 import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
@@ -60,64 +60,88 @@ const Signup = () => {
   };
 
   return (
-    <VStack spacing="5px">
-      <FormControl id="first-name" isRequired>
-        <FormLabel>Name</FormLabel>
-        <Input
-          placeholder="Enter Your Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </FormControl>
-      <FormControl id="email" isRequired>
-        <FormLabel>Email Address</FormLabel>
-        <Input
-          type="email"
-          placeholder="Enter Your Email Address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </FormControl>
-      <FormControl id="password" isRequired>
-        <FormLabel>Password</FormLabel>
-        <InputGroup size="md">
+    <Box 
+      w="100%" 
+      maxW="400px" 
+      p={8} 
+      borderRadius="lg" 
+      boxShadow="lg" 
+      bg="gray.50"
+      mx="auto"
+      mt="10px"
+    >
+      <VStack spacing={6}>
+        <Heading as="h1" size="xl" color="teal.600" textAlign="center">
+          Create an Account
+        </Heading>
+        <Text fontSize="md" color="gray.500" textAlign="center">
+          Join us and start your journey!
+        </Text>
+        <FormControl id="first-name" isRequired>
+          <FormLabel color="teal.600">Name</FormLabel>
           <Input
-            type={show ? "text" : "password"}
-            placeholder="Enter Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            focusBorderColor="teal.500"
           />
-          <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
-            </Button>
-          </InputRightElement>
-        </InputGroup>
-      </FormControl>
-      <FormControl id="confirm-password" isRequired>
-        <FormLabel>Confirm Password</FormLabel>
-        <InputGroup size="md">
+        </FormControl>
+        <FormControl id="email" isRequired>
+          <FormLabel color="teal.600">Email Address</FormLabel>
           <Input
-            type={show ? "text" : "password"}
-            placeholder="Confirm password"
-            value={confirmpassword}
-            onChange={(e) => setConfirmpassword(e.target.value)}
+            type="email"
+            placeholder="Enter Your Email Address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            focusBorderColor="teal.500"
           />
-          <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
-            </Button>
-          </InputRightElement>
-        </InputGroup>
-      </FormControl>
-      <Button
-        onClick={submitHandler}
-        width="100%"
-        style={{ marginTop: 15 }}
-      >
-        Sign Up
-      </Button>
-    </VStack>
+        </FormControl>
+        <FormControl id="password" isRequired>
+          <FormLabel color="teal.600">Password</FormLabel>
+          <InputGroup size="md">
+            <Input
+              type={show ? "text" : "password"}
+              placeholder="Enter Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              focusBorderColor="teal.500"
+            />
+            <InputRightElement width="4.5rem">
+              <Button h="1.75rem" size="sm" onClick={handleClick} bg="teal.500" color="white">
+                {show ? "Hide" : "Show"}
+              </Button>
+            </InputRightElement>
+          </InputGroup>
+        </FormControl>
+        <FormControl id="confirm-password" isRequired>
+          <FormLabel color="teal.600">Confirm Password</FormLabel>
+          <InputGroup size="md">
+            <Input
+              type={show ? "text" : "password"}
+              placeholder="Confirm Password"
+              value={confirmpassword}
+              onChange={(e) => setConfirmpassword(e.target.value)}
+              focusBorderColor="teal.500"
+            />
+            <InputRightElement width="4.5rem">
+              <Button h="1.75rem" size="sm" onClick={handleClick} bg="teal.500" color="white">
+                {show ? "Hide" : "Show"}
+              </Button>
+            </InputRightElement>
+          </InputGroup>
+        </FormControl>
+        <Button
+          onClick={submitHandler}
+          width="100%"
+          bg="teal.600"
+          color="white"
+          _hover={{ bg: "teal.700" }}
+          _active={{ bg: "teal.800" }}
+        >
+          Sign Up
+        </Button>
+      </VStack>
+    </Box>
   );
 };
 

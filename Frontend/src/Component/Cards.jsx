@@ -12,12 +12,12 @@ function Cards({ item }) {
                 />
                 <div className="card-overlay"></div>
                 <div className="card-content">
-                    <h3 className="card-title text-yellow-200">{item.name}</h3>
+                    <h3 className="card-title">{item.name}</h3>
                     <div className="card-description">
-                        <span className="company-name font-bold">{item.company_name || "No description"}</span>
-                        <span className=" location ml-10 text-red-600 font-bold">{item.location}</span>
+                        <span className="company-name">{item.company_name || "No description"}</span>
+                        <span className="location">{item.location}</span>
                     </div>
-                    <div className="card-price font-bold">₹{item.price}</div>
+                    <div className="card-price">₹{item.price}</div>
                 </div>
             </div>
         </div>
